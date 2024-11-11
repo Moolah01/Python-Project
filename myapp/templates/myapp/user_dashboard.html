@@ -1,0 +1,20 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link href="{% static 'css/output.css' %}" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h2>Welcome to your Dashboard</h2>
+        <p>You are logged in as <strong>{{ request.user.username }}</strong></p>
+
+        <!-- Logout link -->
+        <a href="{% url 'login' %}">Logout</a> <!-- This will use the Django logout view -->
+
+        <!-- Add additional dashboard content here -->
+    </div>
+</body>
+</html>
